@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap5 css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/donateMe.css">
+    <!-- bootstrap 5 js  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- 我是字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- 我是標題 -->
+    <title>donate me 請抖內我 </title>
+</head>
+
+<body>
+    <!------------------------------------ 我是header ------------------------------------>
+
+    <div class="header">
+        <div class="header-content ">
+            <input type="checkbox" id="mobile-menu-switch">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/LOGO3 (1).png" alt="">
+                </a>
+            </div>
+            <ul class="menu popup">
+                <li>
+                    <a href="#introduce">Introduce</a>
+                </li>
+                <li>
+                    <a href="#">Plan</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="bs_login.html">Sign in</a>
+                </li>
+            </ul>
+            <label class="mobile-icon" for="mobile-menu-switch">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </div>
+    <!------------------------------------ 我是header ------------------------------------>
+    <!------------------------------------ 我是banner ------------------------------------>
+    <div class="banner">
+        <div class="banner-content">
+            <div class="slogan">
+                <h1>Donate Me ,</h1>
+                <br>
+                <h1>Support Me .</h1>
+                <br>
+                <a href="#" class="btn donate-btn">開始斗內</a>
+                <a href="#" class="btn donate-btn">立即斗內</a>
+                <h6 class="mt-2">你情我願的斗內，才是真斗內。</h6>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------ 我是banner ------------------------------------>
+    <!------------------------------------ 我是article ------------------------------------>
+    <div class="article" id="introduce">
+        <input type="checkbox" id="tab" class="tab-switch">
+        <label for="tab">
+            <h1 @click="donateControl">斗內有什麼好處?</h1>
+        </label>
+        <div class="article-content">
+            <div class="m1" v-show="index >= 1">
+                <img src="images/錢.png" alt="">
+                <h5>零錢</h5>
+                <h6>小小零錢，拯救有為青年</h6>
+            </div>
+            <div class="m2" v-show="index >= 2">
+                <img src="images/鈔票.png" alt="">
+                <h5>鈔票</h5>
+                <h6>大大鈔票，救助可憐青年</h6>
+            </div>
+            <div class="m3" v-show="index >= 3">
+                <img src="images/皇冠.png" alt="">
+                <h5>排行</h5>
+                <h6>斗內排行，成為最大乾爹</h6>
+            </div>
+            <div class="m4" v-show="index >= 4">
+                <img src="images/手機.png" alt="">
+                <h5>手機</h5>
+                <h6>手機斗內，迅速快狠準</h6>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------------------ 我是article ------------------------------------>
+    <!------------------------------------ 我是wrap ------------------------------------>
+    <div class="wrap">
+        <h1>糖果阿姨方案</h1>
+
+        <div class="wrap-content">
+
+            <div class="wrap-article d-flex flex-column justify-content-evenly">
+                <div class="wrap-top d-flex flex-column text-center">
+                    <div class="w1">神級糖果阿姨</div>
+                    <div class="w2">您將獲得富姐姐稱號</div>
+                    <div class="w3">每個月斗內10萬，小鮮肉任你挑。</div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一時斗內一時爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一直斗內一直爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-end ">
+                    <div class="star-btn">開始斗內</div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="wrap-article d-flex flex-column justify-content-evenly">
+                <div class="wrap-top d-flex flex-column text-center">
+                    <div class="w1 text-primary">惡魔糖果阿姨</div>
+                    <div class="w2">您將獲得VVIP稱號</div>
+                    <div class="w3">每個月斗內7萬塊，不收手續費。</div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一時斗內一時爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一直斗內一直爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="star-btn">開始斗內</div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="wrap-article d-flex flex-column justify-content-evenly">
+                <div class="wrap-top d-flex flex-column text-center">
+                    <div class="w1 text-success">天使糖果阿姨</div>
+                    <div class="w2">您將獲得小天使稱號</div>
+                    <div class="w3">每個月斗內5萬塊，不收手續費。</div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一時斗內一時爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一直斗內一直爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="star-btn">開始斗內</div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="wrap-article d-flex flex-column justify-content-evenly">
+                <div class="wrap-top d-flex flex-column text-center">
+                    <div class="w1 text-dark">平民糖果阿姨</div>
+                    <div class="w2">您將獲得凡人稱號</div>
+                    <div class="w3">每個月斗內100，支援小鮮肉。</div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一時斗內一時爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <svg role="img" focusable="false" height="24" width="24" viewBox="0 0 24 24" aria-label=""
+                        class="Svg-ytk21e-0 fJEWJR">
+                        <polyline points="3.32 12.86 8.9 19.4 20.99 5.26" fill="none" stroke="#181818">
+                        </polyline>
+                    </svg>
+                    <div>一直斗內一直爽</div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="star-btn">開始斗內</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="footer-container">
+            <p>&copy; 2023 All rights reserved</p>
+            <ul>
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#">Terms of Use</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="js/vue3.js"></script>
+<script src="js/donateMe.js"></script>
+
+
+
+</html>

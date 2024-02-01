@@ -1,0 +1,539 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// --------------------------我是超連結--------------------------
+a {
+    text-decoration: none;
+    color: inherit;
+
+    // -----------------我是超連結裡的圖片(logo)-------------------
+    >img {
+        width: 90px;
+        height: 75px;
+    }
+}
+
+// ------------------------我是menu裡面的ul------------------------
+ul {
+    display: block;
+}
+
+// -------------------------我是li裡面的點(.)-----------------------
+li {
+    list-style-type: none;
+}
+
+
+
+// --------------------------我是header--------------------------
+.header {
+    background: #dedede29;
+    width: 100%;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    //-------------------------- 我是header內容--------------------------
+    .header-content {
+        font-size: 15px;
+        font-weight: 550;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        position: relative;
+
+
+        // -------------------------- 我是header裡的menu--------------------------
+        >div {
+            user-select: none;
+        }
+
+        .menu {
+            margin: auto 0;
+            width: 40%;
+            color: #000;
+            font-family: 'Open Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            user-select: none;
+
+            li {
+                position: relative;
+            }
+
+            a {
+                &:hover {
+                    color: rgb(75, 219, 242);
+
+                    &::after {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                        height: 2px;
+
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -6px;
+                    width: 100%;
+                    height: 3px;
+                    background: #000;
+                    border-radius: 5px;
+                    transform: scaleX(0);
+                    transition: transform .5s;
+                    transform-origin: right;
+                }
+            }
+
+
+
+
+
+
+        }
+    }
+}
+
+// --------------------------我是banner--------------------------
+
+.banner {
+    width: 100%;
+    height: 90vh;
+    margin: auto;
+
+    .banner-content {
+        background-image: url(../images/123.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.689);
+            z-index: 1;
+        }
+
+        .slogan {
+            font-weight: 600;
+            line-height: 1.5;
+            z-index: 2;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 120px;
+            left: 290px;
+            user-select: none;
+            cursor: pointer;
+
+            >h1 {
+                &:hover {
+                    // color: #000;
+                    transform: scale(1.1);
+                    transition: 1s;
+
+                }
+            }
+
+            >h6 {
+                &:hover {
+                    // color: #000;
+                    transform: scale(1.1);
+                    transition: 1s;
+
+                }
+            }
+
+
+
+            .donate-btn {
+                background: #fff;
+                color: #36b3ec;
+                border-radius: 50px;
+                margin: 10px 0px;
+                width: 155px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background: #131313;
+                    transform: scale(1.05);
+
+                    transition: 0.1s;
+                }
+
+                &:active {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+// --------------------------我是article--------------------------
+
+.article {
+    width: 80%;
+    height: 95vh;
+    margin: auto;
+
+    .article-content {
+
+        user-select: none;
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        // display: none;
+        margin-top: 50px;
+
+        >div {
+            // display: none;
+            width: 25%;
+            text-align: center;
+
+            h5 {
+                text-align: center;
+                font-weight: 900;
+            }
+
+            h6 {
+                text-align: center;
+            }
+        }
+    }
+
+    label {
+        display: block;
+        text-align: center;
+        padding: 85px 0;
+        font-weight: 500;
+        user-select: none;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+    }
+
+    .tab-switch {
+        display: none;
+    }
+
+    .tab-switch:checked~.article-content {
+        // display: flex;
+    }
+
+}
+
+// --------------------------我是wrap--------------------------
+
+.wrap {
+    // background-image: url(../images/mesh-123.png);
+    background-image: url(../images/bgg.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+
+    >h1 {
+        padding: 30px 0;
+        text-align: center;
+        user-select: none;
+
+    }
+
+    .wrap-content {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        user-select: none;
+
+        .wrap-article {
+            width: 280px;
+            height: 400px;
+            box-shadow: 0px 0px 0px 0px, rgba(12, 12, 12, 0.458) 0px 0px 8px;
+            word-break: break-all;
+            border-radius: 10px;
+            cursor: pointer;
+
+
+            .wrap-top {
+                .w1 {
+                    animation: color 1.5s ease-in-out infinite alternate;
+                    color: red;
+                    text-shadow: 0 0 50px #903636;
+                    text-align: center;
+                    font-size: 24px;
+                    padding: 5px 0;
+
+
+                }
+
+                .w2 {
+
+                    font-size: 17px;
+                    font-weight: bold;
+                    padding: 5px 0;
+
+
+                }
+
+                .w3 {
+
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+    }
+
+    .star-btn {
+        background: #fff;
+        color: #36b3ec;
+        border-radius: 50px;
+        margin: 10px 0px;
+        width: 155px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+            background: #131313;
+            transform: scale(1.05);
+
+            transition: 0.1s;
+        }
+
+        &:active {
+            transform: scale(1.1);
+        }
+    }
+
+}
+
+@keyframes color {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #fff;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #df0606;
+    }
+}
+
+// --------------------------我是footer--------------------------
+
+.footer {
+    width: 100%;
+
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px;
+
+    .footer-container {
+        width: 80%;
+
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+
+            li {
+                margin-left: 20px;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobile-icon {
+    position: relative;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    user-select: none;
+
+    >span {
+        // display: inline-block;
+        width: 30px;
+        height: 3px;
+        background: #000;
+        margin-bottom: 5px;
+        transition-property: background-color;
+        transition-duration: 1s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover {
+        >span {
+            background: rgb(75, 219, 242);
+        }
+    }
+}
+
+#mobile-menu-switch {
+    display: none;
+
+    &:checked {
+        ~.mobile-icon {
+            >span {
+                background-color: rgb(75, 219, 242);
+
+                position: absolute;
+
+                &:first-child {
+                    top: -5px;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:last-child {
+                    top: -5px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width : 800px) {
+    .mobile-icon {
+        display: flex;
+    }
+
+    #mobile-menu-switch {
+        &:checked {
+            ~.menu {
+                display: block;
+            }
+        }
+    }
+
+    .header .header-content .menu {
+        display: none;
+    }
+
+    .banner .banner-content .slogan {
+        position: absolute;
+
+        top: 20%;
+        left: 30%;
+    }
+
+    .article {
+        height: auto;
+
+        label {
+            padding-bottom: 0;
+        }
+
+        .article-content {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            >div {
+                width: 60%;
+            }
+        }
+    }
+
+
+
+    .wrap {
+        width: 100%;
+        height: auto;
+
+        >h1 {
+            color: #dedede;
+        }
+
+        .wrap-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            .wrap-article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        margin-top: 20px;
+    }
+
+    li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}

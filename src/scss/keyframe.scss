@@ -1,0 +1,36 @@
+@import 'reset';
+
+.container {
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+        animation-name: move;
+        animation-duration: 3s;
+        transform: translate(70%);
+    }
+}
+
+
+@keyframes move {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(80%);
+    }
+
+}

@@ -1,0 +1,408 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a > img {
+  width: 90px;
+  height: 75px;
+}
+
+ul {
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  background: rgba(222, 222, 222, 0.1607843137);
+  width: 100%;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.header .header-content {
+  font-size: 15px;
+  font-weight: 550;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+.header .header-content > div {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header .header-content .menu {
+  margin: auto 0;
+  width: 40%;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header .header-content .menu li {
+  position: relative;
+}
+.header .header-content .menu a:hover {
+  color: rgb(75, 219, 242);
+}
+.header .header-content .menu a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  height: 2px;
+}
+.header .header-content .menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+.banner {
+  width: 100%;
+  height: 90vh;
+  margin: auto;
+}
+.banner .banner-content {
+  background-image: url(../images/123.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.banner .banner-content::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.689);
+  z-index: 1;
+}
+.banner .banner-content .slogan {
+  font-weight: 600;
+  line-height: 1.5;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 120px;
+  left: 290px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.banner .banner-content .slogan > h1:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.banner .banner-content .slogan > h6:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.banner .banner-content .slogan .donate-btn {
+  background: #fff;
+  color: #36b3ec;
+  border-radius: 50px;
+  margin: 10px 0px;
+  width: 155px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner .banner-content .slogan .donate-btn:hover {
+  background: #131313;
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+.banner .banner-content .slogan .donate-btn:active {
+  transform: scale(1.1);
+}
+
+.article {
+  width: 80%;
+  height: 95vh;
+  margin: auto;
+}
+.article .article-content {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.article .article-content > div {
+  width: 25%;
+  text-align: center;
+}
+.article .article-content > div h5 {
+  text-align: center;
+  font-weight: 900;
+}
+.article .article-content > div h6 {
+  text-align: center;
+}
+.article label {
+  display: block;
+  text-align: center;
+  padding: 85px 0;
+  font-weight: 500;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.article label:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+.article .tab-switch {
+  display: none;
+}
+.wrap {
+  background-image: url(../images/bgg.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+.wrap > h1 {
+  padding: 30px 0;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.wrap .wrap-content {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.wrap .wrap-content .wrap-article {
+  width: 280px;
+  height: 400px;
+  box-shadow: 0px 0px 0px 0px, rgba(12, 12, 12, 0.458) 0px 0px 8px;
+  word-break: break-all;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.wrap .wrap-content .wrap-article .wrap-top .w1 {
+  animation: color 1.5s ease-in-out infinite alternate;
+  color: red;
+  text-shadow: 0 0 50px #903636;
+  text-align: center;
+  font-size: 24px;
+  padding: 5px 0;
+}
+.wrap .wrap-content .wrap-article .wrap-top .w2 {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.wrap .wrap-content .wrap-article .wrap-top .w3 {
+  font-size: 14px;
+}
+.wrap .star-btn {
+  background: #fff;
+  color: #36b3ec;
+  border-radius: 50px;
+  margin: 10px 0px;
+  width: 155px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.wrap .star-btn:hover {
+  background: #131313;
+  transform: scale(1.05);
+  transition: 0.1s;
+}
+.wrap .star-btn:active {
+  transform: scale(1.1);
+}
+
+@keyframes color {
+  0%, 100% {
+    text-shadow: 0 0 10px #fff;
+  }
+  50% {
+    text-shadow: 0 0 20px #df0606;
+  }
+}
+.footer {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+}
+.footer .footer-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .footer-container ul li {
+  margin-left: 20px;
+}
+.footer .footer-container ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-container ul li a:hover {
+  text-decoration: underline;
+}
+
+.mobile-icon {
+  position: relative;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.mobile-icon > span {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  margin-bottom: 5px;
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+.mobile-icon > span:last-child {
+  margin-bottom: 0;
+}
+.mobile-icon:hover > span {
+  background: rgb(75, 219, 242);
+}
+
+#mobile-menu-switch {
+  display: none;
+}
+#mobile-menu-switch:checked ~ .mobile-icon > span {
+  background-color: rgb(75, 219, 242);
+  position: absolute;
+}
+#mobile-menu-switch:checked ~ .mobile-icon > span:first-child {
+  top: -5px;
+  transform: rotate(45deg);
+}
+#mobile-menu-switch:checked ~ .mobile-icon > span:nth-child(2) {
+  display: none;
+}
+#mobile-menu-switch:checked ~ .mobile-icon > span:last-child {
+  top: -5px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-icon {
+    display: flex;
+  }
+  #mobile-menu-switch:checked ~ .menu {
+    display: block;
+  }
+  .header .header-content .menu {
+    display: none;
+  }
+  .banner .banner-content .slogan {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+  }
+  .article {
+    height: auto;
+  }
+  .article label {
+    padding-bottom: 0;
+  }
+  .article .article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .article .article-content > div {
+    width: 60%;
+  }
+  .wrap {
+    width: 100%;
+    height: auto;
+  }
+  .wrap > h1 {
+    color: #dedede;
+  }
+  .wrap .wrap-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap .wrap-content .wrap-article {
+    width: 100%;
+    height: auto;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  ul {
+    margin-top: 20px;
+  }
+  li {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}/*# sourceMappingURL=donateMe.css.map */

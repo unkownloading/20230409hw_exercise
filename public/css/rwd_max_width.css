@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.block {
+  background: yellow;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .block {
+    background: blue;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 600px) {
+  .block {
+    background: red;
+  }
+}/*# sourceMappingURL=rwd_max_width.css.map */

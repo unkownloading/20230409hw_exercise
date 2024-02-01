@@ -1,0 +1,68 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  background: rgb(55, 158, 153);
+}
+.container .accrodion {
+  margin: 20px auto;
+  background: rgb(247, 39, 11);
+}
+.container .accrodion .tab {
+  border: 3px solid rgb(41, 164, 221);
+  border-bottom-width: 0;
+}
+.container .accrodion .tab:last-child {
+  border-bottom-width: 3px;
+}
+.container .accrodion .tab > label {
+  display: flex;
+  background: rgb(15, 133, 74);
+  color: #fff;
+  padding: 12px;
+  font-weight: 800;
+  font-family: monospace;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .accrodion .tab > label > div {
+  font-size: 25px;
+}
+.container .accrodion .tab > label:hover {
+  background: orangered;
+}
+.container .accrodion .tab > label .close-icon {
+  display: none;
+}
+.container .accrodion .tab .tab-content {
+  padding: 10px;
+  display: none;
+}
+.container .accrodion .tab .tab-switch:checked + label {
+  background: rgb(209, 209, 79);
+}
+.container .accrodion .tab .tab-switch:checked + label .open-icon {
+  display: none;
+}
+.container .accrodion .tab .tab-switch:checked + label .close-icon {
+  display: block;
+}
+.container .accrodion .tab .tab-switch:checked ~ .tab-content {
+  display: block;
+}
+.container .accrodion .tab-switch {
+  display: none;
+}/*# sourceMappingURL=accrodion.css.map */
